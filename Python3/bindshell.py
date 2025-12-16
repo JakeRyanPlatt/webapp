@@ -37,5 +37,5 @@ def main(port):
         t = Thread(target=handle_input, args=(client_socket, ))
         t.start()
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     main()
