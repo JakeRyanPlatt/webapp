@@ -1,16 +1,22 @@
-﻿using System;
-using System.IO.Compression;
+﻿using MyAlias=  MyNamespace;
+using AnotherAlias = AnotherNamespace;
 
 namespace MyNamespace
 {
-    class MyClass {} 
+    class MyClass { }
+}
+
+namespace AnotherNamespace
+{
+    class MyClass { }
 
     class Program
     {
         static void Main()
         {
-            // Using fully qualified name to avoid naming conflict
-            MyNamespace.MyClass myObject = new MyNamespace.MyClass();
+            // Using aliases to differentiate between conflucting namespaces
+            MyAlias.MyClass myObject1 = new MyAlias.MyClass();
+            AnotherAlias.MyClass myObject2 = new AnotherAlias.MyClass();
         }
     }
 }
